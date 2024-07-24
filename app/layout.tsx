@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Your go to the  documentation",
 };
 export default function RootLayout({
-  children,
+  children ,
 }: {
   childern: React.ReactNode;
 }) {
