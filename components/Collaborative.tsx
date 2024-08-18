@@ -68,7 +68,7 @@ const CollaborativeRoom = ({
                   alt="edit"
                   height={24}
                   onClick={() => setEditing(true)}
-                  className="pointer"
+                  // className="pointer"
                 />
               )}
               {currentUserType !== "editor" && !editing && (
