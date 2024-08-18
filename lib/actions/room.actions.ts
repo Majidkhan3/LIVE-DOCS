@@ -45,6 +45,6 @@ export const getDocument= async ({roomId , userId}:{roomId:string,userId:string}
     return parseStringify(room)
   } catch (error) {
     console.log(`Eroor happend while getting a room : ${error}`)
-    
+ console.log("helo")   
   }
 }
