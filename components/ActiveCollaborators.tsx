@@ -11,7 +11,7 @@ const ActiveCollaborators = () => {
         <li key={id}>
           <Image
             src={avatar}
-            // alt="name"
+            alt="name"
             width={100}
             height={100}
             className="inline-block size-8 rounded-full ring-2 ring-dark-100"
