@@ -6,13 +6,13 @@ import Image from "next/image";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-
+console.log("Changes According to you");
 const Home = async () => {
   const clerkUser = await currentUser();
   console.log(clerkUser);
   if (!currentUser) redirect("sign-in");
   const documents = [];
-  // console.log(documents, "here document here");
+  console.log(documents, "here document here");
   return (
     <main className="home-container">
       <Header className="sticky">
