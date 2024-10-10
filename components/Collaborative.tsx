@@ -34,7 +34,7 @@ const CollaborativeRoom = ({
     };
   }, []);
   const containerRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const updateTitleHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {};
   return (
     <RoomProvider id={roomId}>
@@ -53,7 +53,7 @@ const CollaborativeRoom = ({
                   placeholder="Enter Title "
                   onChange={(e) => setdocumentTitle(e.target.value)}
                   onKeyDown={updateTitleHandler}
-                  disable={!editing}
+                  // disable={!editing}
                   className="document-title-input"
                 />
               ) : (

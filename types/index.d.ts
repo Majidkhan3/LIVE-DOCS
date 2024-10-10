@@ -66,13 +66,13 @@ declare type SearchParamProps = {
   declare type CollaborativeRoomProps = {
     roomId: string;
     roomMetadata: RoomMetadata;
-    users: User[];
-    currentUserType: UserType;
+    // users: User[];
+    // currentUserType: UserType;
   };
   
   declare type AddDocumentBtnProps = {
-    userId: string;
-    email: string;
+    userId?: string;
+    email?: string;
   };
   
   declare type DeleteModalProps = { roomId: string };

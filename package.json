@@ -2,6 +2,7 @@
   "name": "live_docs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Majidkhan3.github.io/LIVE-DOCS",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

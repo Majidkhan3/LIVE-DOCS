@@ -11,7 +11,7 @@ const Home = async () => {
   const clerkUser = await currentUser();
   console.log(clerkUser);
   if (!currentUser) redirect("sign-in");
-  const documents = [];
+  const documents: any[] = [];
   console.log(documents, " here");
   return (
     <main className="home-container">
@@ -35,7 +35,7 @@ const Home = async () => {
             className="mx-auto"
           />
           <AddDocumentBtn
-            userId={clerkUser.id}
+            userId={clerkUser?.id}
             email={clerkUser?.emailAddresses[0].emailAddress}
           />
         </div>

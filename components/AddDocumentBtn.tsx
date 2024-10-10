@@ -5,12 +5,20 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { createDocument } from "@/lib/actions/room.actions";
 import { useRouter } from "next/navigation";
+interface AddDocumentBtnProps {
+  userId?: string;
+  email?: string;
+}
 const AddDocumentBtn = ({ userId, email }: AddDocumentBtnProps) => {
   const router = useRouter();
   const addDocumentHandler = async () => {
     try {
-      const room = await createDocument({ userId, email });
-      if (room) router.push(`/documents/${room.id}`);
+      if (userId && email) {
+        const room = await createDocument({ userId, email });
+        if (room) router.push(`/documents/${room.id}`);
+      } else {
+        console.error("User ID and email must be provided");
+      }
     } catch (error) {
       console.log(error);
     }
