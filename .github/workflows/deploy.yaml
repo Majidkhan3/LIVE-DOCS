@@ -12,16 +12,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+
       - name: Install dependencies
         run: npm install
+
       - name: Build Project
         run: npm run build
+
+      - name: Export Static HTML
+        run: npm run export
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: build
+          folder: out # Deploy the exported static files
