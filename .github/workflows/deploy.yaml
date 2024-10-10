@@ -24,4 +24,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: out  # The default output folder for static exports in Next.js
+          folder: build  # The default output folder for static exports in Next.js
