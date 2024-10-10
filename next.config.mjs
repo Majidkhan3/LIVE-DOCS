@@ -12,7 +12,8 @@ const nextConfig = {
   },
   basePath: isProd ? "/LIVE-DOCS" : "",
   assetPrefix: isProd ? "/LIVE-DOCS/" : "",
-  trailingSlash: true, // Ensures compatibility with GitHub Pages
+  trailingSlash: true, // Required for GitHub Pages
+  output: "export", // This enables static export for the app
 };
 
 export default nextConfig;
